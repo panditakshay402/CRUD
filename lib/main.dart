@@ -20,6 +20,10 @@ class CRUD extends StatelessWidget {
       ),
       body: Column(
         children: [
+          Text('This is CRUD APP'),
+          Container(
+            color: Colors.red,
+          ),
           TextField(
             controller: Name,
             decoration: InputDecoration(
