@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(CRUD());
@@ -9,6 +10,24 @@ class CRUD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var Name = TextEditingController();
+    var Description = TextEditingController();
+    var Price = TextEditingController();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('CRUD'),
+      ),
+      body: Column(
+        children: [
+          TextField(
+            controller: Name,
+            decoration: InputDecoration(
+              hintText: 'Enter Name',
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
