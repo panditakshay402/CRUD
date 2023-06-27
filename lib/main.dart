@@ -13,33 +13,43 @@ class Crud extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       debugShowCheckedModeBanner: false,
-      title: 'CRUD  APP',
+      title: 'CRUD APP',
       home: CRUD(),
     );
   }
 }
 
-class CRUD extends StatelessWidget {
+class CRUD extends StatefulWidget {
   const CRUD({Key? key}) : super(key: key);
 
   @override
+  State<CRUD> createState() => _CRUDState();
+}
+
+class _CRUDState extends State<CRUD> {
+  // String name = "";
+  TextEditingController tec = new TextEditingController();
+  String Name = "";
+
+  @override
+  void dispose() {
+    tec.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    var Name = TextEditingController();
     var Description = TextEditingController();
     var Price = TextEditingController();
+
     // String name, description;
     // double price;
 
-    // getName(name) {
-    //   this.name = name;
-    //   print(this.name);
-    // }
-    //
     // getDescription(description) {
     //   this.description = description;
     //   print(this.description);
     // }
-
+    //
     // getPrice(price){
     //   this.price=double.parse(price);
     //   print(this.price);
@@ -66,7 +76,7 @@ class CRUD extends StatelessWidget {
             color: Colors.red,
           ),
           TextField(
-            controller: Name,
+            controller: tec,
             // onChanged: (String name) {
             //   getName(name);
             // },
@@ -107,7 +117,14 @@ class CRUD extends StatelessWidget {
               Container(
                 width: 5,
               ),
-              ElevatedButton(onPressed: () {}, child: Text('CREATE')),
+              ElevatedButton(
+                child: Text('CREATE'),
+                onPressed: () {
+                  setState(() {
+                    Name = tec.text;
+                  });
+                },
+              ),
               Container(
                 width: 5,
               ),
@@ -128,15 +145,15 @@ class CRUD extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(('Name  $Name')),
-              Container(
-                width: 95,
-              ),
-              Text('Description $Description'),
-              Container(
-                width: 95,
-              ),
-              Text(('Price $Price')),
+              Text(Name),
+              // Container(
+              //   width: 95,
+              // ),
+              // Text('Description $Description'),
+              // Container(
+              //   width: 95,
+              // ),
+              // Text(('Price $Price')),
             ],
           )
         ],
