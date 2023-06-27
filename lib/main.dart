@@ -28,33 +28,23 @@ class CRUD extends StatefulWidget {
 
 class _CRUDState extends State<CRUD> {
   // String name = "";
-  TextEditingController tec = new TextEditingController();
+  TextEditingController tec = TextEditingController();
+  TextEditingController tec2 = TextEditingController();
+  TextEditingController tec3 = TextEditingController();
   String Name = "";
+  String Description = "";
+  String Price = "";
 
   @override
   void dispose() {
     tec.dispose();
+    tec2.dispose();
+    tec3.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    var Description = TextEditingController();
-    var Price = TextEditingController();
-
-    // String name, description;
-    // double price;
-
-    // getDescription(description) {
-    //   this.description = description;
-    //   print(this.description);
-    // }
-    //
-    // getPrice(price){
-    //   this.price=double.parse(price);
-    //   print(this.price);
-    // }
-
     return Scaffold(
       appBar: AppBar(
         title: Text('CRUD'),
@@ -77,9 +67,6 @@ class _CRUDState extends State<CRUD> {
           ),
           TextField(
             controller: tec,
-            // onChanged: (String name) {
-            //   getName(name);
-            // },
             decoration: InputDecoration(
                 hintText: 'Enter Name',
                 border: OutlineInputBorder(
@@ -90,7 +77,7 @@ class _CRUDState extends State<CRUD> {
             height: 10,
           ),
           TextField(
-            controller: Description,
+            controller: tec2,
             decoration: InputDecoration(
                 hintText: 'Description',
                 border: OutlineInputBorder(
@@ -101,7 +88,7 @@ class _CRUDState extends State<CRUD> {
             height: 10,
           ),
           TextField(
-            controller: Price,
+            controller: tec3,
             decoration: InputDecoration(
                 hintText: 'Price',
                 border: OutlineInputBorder(
@@ -122,6 +109,8 @@ class _CRUDState extends State<CRUD> {
                 onPressed: () {
                   setState(() {
                     Name = tec.text;
+                    Description = tec2.text;
+                    Price = tec3.text;
                   });
                 },
               ),
@@ -145,15 +134,15 @@ class _CRUDState extends State<CRUD> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(Name),
-              // Container(
-              //   width: 95,
-              // ),
-              // Text('Description $Description'),
-              // Container(
-              //   width: 95,
-              // ),
-              // Text(('Price $Price')),
+              Text("$Name"),
+              Container(
+                width: 95,
+              ),
+              Text("$Description"),
+              Container(
+                width: 95,
+              ),
+              Text("$Price"),
             ],
           )
         ],
