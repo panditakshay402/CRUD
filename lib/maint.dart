@@ -17,7 +17,7 @@ class Crud extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.lightGreen),
       debugShowCheckedModeBanner: false,
-      title: 'CRUD APP',
+      title: 'CRUD  APP',
       home: CRUD(),
     );
   }
