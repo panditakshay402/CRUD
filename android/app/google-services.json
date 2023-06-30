@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "436296011553",
+    "firebase_url": "https://crud-d4421-default-rtdb.firebaseio.com",
+    "project_id": "crud-d4421",
+    "storage_bucket": "crud-d4421.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436296011553:android:a438247c428e8cefdfb860",
+        "android_client_info": {
+          "package_name": "com.example.crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436296011553-aqb2229r4dg3172dnm94e0qsvr4hir18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuSrhHQWYZGa0G3nyz27q-ucm_CLGaNEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436296011553-aqb2229r4dg3172dnm94e0qsvr4hir18.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "436296011553-v6vjr5ujgi1qa0eob9r4ot1sncdqet6p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.crud"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
