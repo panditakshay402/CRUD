@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -113,18 +113,18 @@ class _CRUDState extends State<CRUD> {
                 ElevatedButton(
                   child: Text('CREATE'),
                   onPressed: () {
-                    DocumentReference df = FirebaseFirestore.instance
-                        .collection("Dishes")
-                        .doc(Name);
-                    df.get().then((datasnapshot) {
-                      print(datasnapshot.data());
-                    });
-
-                    // setState(() {
-                    //   Name = tec.text;
-                    //   Description = tec2.text;
-                    //   Price = tec3.text;
+                    // DocumentReference df = FirebaseFirestore.instance
+                    //     .collection("Dishes")
+                    //     .doc(Name);
+                    // df.get().then((datasnapshot) {
+                    //   print(datasnapshot.data());
                     // });
+
+                    setState(() {
+                      Name = tec.text;
+                      Description = tec2.text;
+                      Price = tec3.text;
+                    });
                   },
                 ),
                 Container(
